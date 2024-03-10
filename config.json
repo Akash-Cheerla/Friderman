@@ -1,0 +1,12 @@
+{
+    "host": "0.0.0.0",
+    "port": 9344,
+    "logs": {
+        "filepath": "logs/fri-red-man-api.log",
+        "level": "DEBUG",
+        "rotation": "1 day"
+    },
+    "google_creds_path": "assets/febfri-b9fd12828b4d.json",
+    "wake_words": ["hey fri", "hey fry", "hi fri", "hi fry"],
+    "menu_csv_path": "assets/Menu_items.csv"
+}
