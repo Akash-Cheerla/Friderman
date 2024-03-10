@@ -1,0 +1,9 @@
+python3 -m venv .env
+source .env/bin/activate if linux, .env\Scripts\activate if windows
+pip install --upgrade pip
+pip install fastapi
+pip install uvicorn[standard]
+pip install python-multipart
+pip install google-cloud-texttospeech
+pip install google-cloud-speech
+pip install pandas
