@@ -51,6 +51,7 @@ def parse_order(recognized_text):
 
 
 def get_menu_item_variants(item_name):
+    logger.info(f"Getting the menu variants for the item name = {item_name}")
     matching_items = menu_df.loc[menu_df['Menu Item'].str.lower() == item_name.lower()]
     if  len(matching_items) != 0:
         match = True
@@ -64,6 +65,7 @@ def get_menu_item_variants(item_name):
 
 
 def process_order_step_one(order_text):
+    logger.info(f"Recevied order text = {order_text}")
     items = [item.strip() for item in re.split(r'\band\b', order_text, flags=re.IGNORECASE)]
 
     founditems = []
@@ -89,6 +91,7 @@ def process_order_step_one(order_text):
 
 
 def get_closest_variant(user_choice, variants):
+    logger.info(f"Recevied the user choice = {user_choice}")
     user_choice_normalized = user_choice.lower().strip()
     for variant in variants:
         if variant.lower() in user_choice_normalized:
