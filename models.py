@@ -39,14 +39,12 @@ class TextFirstStepRequest(BaseModel):
 class TextSelectVariantRequest(BaseModel):
     restaurant_id: int
     text: str
-    item_index: int
     items: List[Union[SingleItem, MatchedSingleItem]]
 
 
 class TextSpecialInstructionRequest(BaseModel):
     restaurant_id: int
     text: str
-    item_index: int
     items: List[Union[SingleItem, MatchedSingleItem, ConfirmedSingleItem]]
 
 
